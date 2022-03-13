@@ -1,0 +1,146 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+
+}
+.new-slides-box{
+    margin-top: 3rem;
+    height: 15rem;
+    width: 100%;
+    
+    position: relative;
+}
+.new-slides{
+ display: flex;
+ gap: 2rem;
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ z-index: -1;
+}
+.new-slide{
+  flex: 1;
+ 
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.new-slide h1{
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+.new-slide img{
+ height: 100%;
+ width: 100%;
+ border-radius:1rem ;
+}
+#k1:checked ~ #s1{
+    z-index: 9;
+}
+#k2:checked ~ #s2{
+    z-index: 9;
+}
+.p,.n{
+    position: absolute;
+    top: 50%;
+    width: 2rem;
+    cursor: pointer;
+    height: 4.7rem;
+    width: 4.7rem;
+    background-color: var(--colorMain);
+    box-shadow: -.6rem .6rem 2rem rgba(0,0,0,.1),
+                 .6rem -.6rem 2rem rgba(0,0,0,.1);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 33;
+    transform: translateY(-50%);
+}
+.p{
+    right: 0;
+}
+.p img{
+    height:50%;
+    width: 50%;
+    z-index: 55;
+    transform: rotate(180deg);
+}
+.n{
+    left: 0;
+}
+.n img{
+    height: 50%;
+    width: 50%;
+   z-index: 44;
+}
+
+
+
+
+.n1{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.n2{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n3{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n4{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n5{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n6{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n7{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n8{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n9{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.n10{
+    background: url(../images/resent/n1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
