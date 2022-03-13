@@ -143,13 +143,9 @@ body{
 /* Header top end */
 
 /* Header bottom start */
-.header-bottom{
 
-}
 /* Top Navbar start */
-.nav-top-row{
-   
-}
+
 .nav-top-row ul{
   list-style: none;
   display: flex;
@@ -499,8 +495,8 @@ body{
    
 }
 .card-content .card-img{
+    
     position: relative;
-   
     display: flex;
     justify-content: center;
     width: 90%;
@@ -514,7 +510,7 @@ body{
     background-color: #FFAD33;
     width: 100%;
    text-align: center;
-   padding: 1rem 0;
+   padding: 1.3rem 0;
    font-size: 1.5rem;
    font-weight: 400;
    color: white;
@@ -529,7 +525,8 @@ body{
  opacity: 1;
 }
 .card-content .card-img img{
-   width: 90%;
+   width: 100%;
+   
 }
 .card:hover .card-content .card-img img
 {
