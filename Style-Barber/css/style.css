@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka:wght@300;400&family=Parisienne&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+/* Navbar section start */
+nav{
+    width: 100%;
+    padding: 2rem 5rem;
+    background-color: blueviolet !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 999999999999999;
+}
+#navbarNavDropdown ul li{
+ background-color: black;
+ padding: 1rem;
+ position: relative;
+ z-index: 0;
+}
+#navbarNavDropdown ul li::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: circle(18.8% at 0 100%);
+    background-color: red;
+    z-index: -1;
+    transition: .5s;
+}
+#navbarNavDropdown ul li:hover::after{
+    clip-path: circle(100%); 
+}
+#navbarNavDropdown ul li:hover > *{
+    color: #ffffff;
+    z-index: 11;
+}
+ #navbarNavDropdown ul li a{
+     display: block;
+    font-size: 1.6rem;
+    color: white;
+    
+}
+/* Navbar section start */
+
+/* Banner slider start  */
+#carousel-edit{
+    position: relative; 
+   z-index: 0;
+ }
+ #carousel-edit::after{
+   position: absolute;
+   content: '';
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #0000004d;
+   
+ }
+
+ /* Banner slider end  */
+
+ /* About section start */
+ #about{
+     margin-bottom: 3rem;
+ }
+ .about-content-box{
+    width:100% ;
+    height: 70vh;
+}
+
+ .about-content
+ {   height: 70vh;
+     background: url(../images/bg1.jpg);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size:100% ;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     color: #ffffff;
+     position: relative;
+     
+     
+ }
+ .about-content::after{
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background-color: #8d87872a;
+ }
+ .about-content h1:nth-child(1)
+ {
+     margin-bottom: 3rem;
+   font-size: 2.3rem;
+ }
+ .about-content h1:nth-child(2)
+ {
+   font-size: 10rem;
+    font-family: 'Parisienne', cursive;
+ }
+ .about-content h1:nth-child(3)
+ {
+   font-size: 9rem;
+   font-weight: 700;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+.about-bg{
+    background: url(../images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    
+    background-size: 100%;
+}
+.about-bg p{
+ font-size: 3rem;
+}
+.about-bg h1{
+ font-size: 5rem;
+ font-weight: bold;
+ margin-bottom: 4rem ;
+}
+.about-bg h3{
+ font-size: 2rem;
+ margin-bottom: 3rem;
+}
+.about-bg h4{
+ font-size: 2rem;
+ margin-bottom: 3rem;
+}
+.about-bg button{
+   
+ font-size: 2rem;
+   padding:1rem 3rem;
+   color: #FFFFFF;
+   background-color: black;
+   border-radius: 4rem;
+   outline: none;
+   border: none;
+  margin-bottom: 4rem;
+}
+.about-bg button:hover{
+    background-color: rgb(150, 31, 31);
+}
+ #row2{
+     padding: 5rem 0;
+ }
+
+ /* About section End */
+
+
+ /* Price section start */
+ .price{
+     height: 80vh;
+     background: url(../images/bg4.jpg);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: 100%;
+    
+     position: relative;
+ }
+ .price::after{
+     position: absolute;
+     content: '';
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: #00000085;
+ }
+ .round-div{
+     position: absolute;
+     top:50%;
+     left: 9rem;
+     height: 45rem;
+     width: 45rem;
+     border-radius: 50%;
+     background-color: rgba(5, 5, 5, 0.767);
+     transform: translateY(-50%);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #ffffff;
+ }
+ .round-div h2{
+    font-weight: bold; 
+    padding-bottom: 1rem;
+    color: rgba(255, 0, 85, 0.863);
+ }
+ .round-div p{
+    font-size: 1.7rem;
+ }
+ .round-div button{
+   margin-top: 1rem;
+   border: none;
+   outline: none;
+   padding: 1rem 1.5rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   background-color:rgba(255, 0, 85, 0.863) ;
+   color: #FFFFFF;
+   cursor: pointer;
+ }
+ /* Price section end */
+
+ /* Service section start */
+ #service-section{
+    padding: 5rem 0;
+    text-align: center;
+    
+ }
+ .servive-text p{
+     font-size: 2rem;
+ }
+ .service-text h1{
+    font-size:8rem;
+    font-weight: bold;
+ }
+
+ .service-content img{
+   cursor: pointer;
+   transition: .4s;
+   
+ }
+ .service-content img:hover{
+    border-radius: 50%;
+   
+   transform: scale(.8);
+ }
+ .service-content h1{
+   margin: 1.5rem 0 1.3rem 0;
+   font-weight: bold;
+ }
+ .service-content p{
+  font-size: 1.5rem;
+ }
+  /* Service section end */
+
+  /* Award section start */
+ .award-box{
+     height: 80rem;
+     width: 100%;
+     background: url(../images/bg2.jpg);
+     background-position: 100% 100%;
+     background-size:cover;
+    
+     position: relative;
+    
+ }
+ .award-box::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000085;
+ }
+ .box1{
+     position: absolute;
+     top: 15rem;
+     left:52rem;
+     height: 25rem;
+     width: 25rem;
+     border-radius: 50%;
+     background-color: rgba(255, 0, 43, 0.767);
+    
+ }
+ .box2{
+    position: absolute;
+    top: 30rem;
+    left: 65rem;
+    height: 35rem;
+    width: 35rem;
+    border-radius: 50%;
+    background-color: #00000085;
+    padding: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+ }
+ .box1,.box2{
+    display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #FFFFFF;
+ }
+/* Award section start */
+
+
+
+
+ /* Image gellary section start */
+ .image_gellary{
+    width: 90%;
+    display: flex;
+    
+    justify-content:center;
+    align-items: center;
+    margin: 110px ;
+    flex-wrap: wrap;
+    
+}
+.image_box{
+    height: 250px;
+    width: 225px;
+    position: relative;
+}
+.image_box img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    border: 3px solid wheat;
+    transition: .8s ease;
+}
+.image_box:hover img:nth-child(1){
+    transform: rotate(-10deg) translate(-150px,-6px)scale(1.1);
+}
+.image_box:hover img:nth-child(2){
+    transform: rotate(10deg) translate(150px,-6px)scale(1.1);
+}
+.image_box:hover img:nth-child(3){
+    border-radius: 50%;
+}
+
+ /* Image gellary section end */
+
+
+ /* Vauchar section start */
+.vauchar-box{
+    height: 70vh;
+    background: url(../images/bg7.jpg);
+    background-position: center center;
+    background-size:cover;
+ 
+    position: relative;
+}
+.vauchar-box::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000085;
+}
+.box-inner{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 50%;
+    background-color: rgba(243, 238, 238, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box-inner a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box-inner p{
+    font-size: 1.3rem;
+}
+ /* Vauchar section end */
+
+
+ /* Tean member section start */
+ #team-member{
+     margin: 5rem 0;
+ }
+ .barber-title{
+     text-align: center;
+     font-size: 4rem;
+     font-weight: bold;
+     font-family: fantasy;
+     letter-spacing: .2rem;
+     margin-bottom: 4rem ;
+ }
+ .card_box{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    height: 40vh;
+    width: 100%;
+    margin: 0 auto;
+}
+.card{
+    height: 30rem;
+    width:  25rem;
+    border: none;
+    outline: none;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius:51% 49% 85% 15% / 58% 44% 56% 42%  ;
+    transition: .8s ease;
+}
+.card h5{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+    position: relative;
+    opacity: 0;
+    transition: .7s;
+}
+.card h5::before{
+    content: '';
+    width: 0;
+    height: .2rem;
+    position: absolute;
+    bottom: -1rem;
+    background-color: #000;
+    transition: .8s;
+   
+}
+.card:hover h5{
+    opacity: 1;
+}
+.card:hover h5::before{
+    width: 32%;
+}
+.card:hover img{
+    border-radius: 10%;
+    filter: grayscale(100%);
+}
+
+   
+
+ /* Tean member section end */
+
+
+  /* Contact section start */
+
+  .fm-bg{
+      height: 80rem;
+      background: url(../images/parallax_20.jpg);
+      background-position: center center;
+      background-size: cover;
+   
+  }
+  .form-title{
+     padding: 3rem 0;
+  }
+  .form-title h1{
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+.form-content{
+    display: flex;
+    justify-content: center;
+   
+}
+  .form-content form{
+   width: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   
+  }
+  .form-content form input, .form-content form textarea{
+    background: #f8022b44;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+  }
+  .form-content form input{
+      color: #FFFFFF;
+      padding: 2rem 0;
+      font-size: 1.8rem;
+      padding-left: 2rem;
+      letter-spacing: .2rem;
+  }
+  .form-content form textarea{
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    padding-left: 2rem;
+    letter-spacing: .2rem;
+    resize: none;
+  }
+  .form-content form button{
+      padding: 2rem 0;
+      margin-top: 1rem;
+      border: none;
+      outline: none;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: .2rem;
+      background: #f8022b44;
+      color: #FFFFFF;
+      transition: .4s;
+  }
+  .form-content form button:hover{
+    background: rgba(12, 11, 11, 0.432);
+  }
+
+  
+  
+  /* Contact section end */
+   /* Footer section start */
+
+   .ft-top{
+  
+    background: url(../images/barber_all.jpg);
+    background-position: center center;
+    background-size:100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    color: #ffffff;
+    position: relative;
+    z-index: 0;
+    
+     }
+     .r-top::after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0303035e; 
+        z-index: -1;
+        
+     }
+     .r-top{
+        padding: 0rem 4rem 4rem 4rem;
+        position: relative;
+        color: #ffffff;
+     }
+     .r-top h1{
+        padding-top:6rem;
+        font-size: 3rem;
+     }
+     .r-top p{
+      font-size:1.5rem;
+     
+     }
+     .r-top form input{
+         outline: none;
+         padding: .6rem 2.4rem; 
+        border: none;
+     }
+     .r-top form button{
+        border: none;
+        outline: none;
+        padding: .4rem .5rem;
+        margin-left: .6rem;
+        background-color: brown;
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: .1rem;
+     }
+     .r-top p:hover{
+        cursor: pointer;
+        
+     }
+     .r-bottom{
+        background-color: black;
+        padding: 3rem 4rem; 
+        display: flex;
+     }
+     .r-bottom .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+     }
+     .r-bottom .copyright h3{
+         font-size: 1.8rem;
+         letter-spacing: .2rem;
+         color: rgb(212, 49, 20);
+         font-weight: bold;
+     }
+     .r-bottom .copyright h1{
+         font-size: 2.2rem;
+         letter-spacing: .2rem;
+         color: rgb(11, 78, 61);
+         font-weight: bold;
+     }
+   /* Footer section end */
