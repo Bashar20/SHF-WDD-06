@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f3;
+}
+.calculator{
+    height: 45vh;
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 12px 12px 20px #cbced1,
+                -12px -12px 20px #ffffffff;
+}
+.display{
+    margin: 15px 10px;
+}
+.display .output{
+    width: 100%;
+    padding: 25px 10px;
+    background: #ecf0f3;
+    border: none;
+    outline: none;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffffff;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: right;
+    color: rgba(92, 54, 54, 0.829);
+}
+.btns{
+margin: 8px 3px;
+}
+
+.btns .row{
+    display: flex;
+    justify-content: center;
+}
+.btns .row button{
+    height: 40px;
+    width: 100px;
+    margin: 5px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    font-weight: 700;
+    color: rgba(92, 54, 54, 0.829);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffffffff ;
+   
+}
+.btns .row button:hover{
+    box-shadow: inset 5px 5px 8px #00000020,
+                inset -5px -5px 8px #ffffffff ;
+}
+#ce{
+    background: rgb(235, 78, 151);
+    color: #ffffff;
+}
+#ce:hover{
+    background: #ecf0f3;
+    color: rgba(92, 54, 54, 0.829);
+    box-shadow: inset 5px 5px 8px #00000020,
+                inset -5px -5px 8px #ffffffff ; 
+}
+#ac{
+    background: rgb(10, 148, 67);
+    color: #ffffff;  
+}
+#ac:hover{
+    background: #ecf0f3;
+    color: rgba(92, 54, 54, 0.829);
+    box-shadow: inset 5px 5px 8px #00000020,
+                inset -5px -5px 8px #ffffffff ; 
+
+}
+#eql{
+    background-color: rgb(8, 122, 122);
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffffffff ;
+    
+}
+#eql:hover{
+    background: #ecedf3;
+    color: rgba(92, 54, 54, 0.829);
+    box-shadow: inset 5px 5px 8px #00000020,
+                inset -5px -5px 8px #ffffffff ; 
+
+}
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="calculator">
+           <div class="display">
+               <input type="text" value="" class="output" id="output"  placeholder="0">
+           </div>
+           <div class="btns">
+               <div class="row">
+                   <button class="btn" id="ce" onclick="output.value = output.value.slice(0,-1)" >CE</button>
+                   <button class="btn" onclick="output.value =(output.value) *(output.value)">X <sup>2</sup></button>
+                   <button class="btn" onclick="output.value += '('">(</button>
+                   <button class="btn" onclick="output.value += ')'">)</button>
+                   <button class="btn" onclick="output.value +='%'">%</button>
+                   <button class="btn" id="ac" value="CE" onclick="output.value = ''">AC</button>
+               </div>
+               <div class="row">
+                   <button class="btn" onclick="output.value = Math.sin(output.value)">sin</button>
+                   <button class="btn" onclick="output.value = Math.PI"> &pi; </button>
+                   <button class="btn" onclick="output.value += '7'">7</button>
+                   <button class="btn" onclick="output.value += '8'">8</button>
+                   <button class="btn" onclick="output.value += '9'">9</button>
+                   <button class="btn" onclick="output.value += '/'">/</button>
+               </div>
+               <div class="row">
+                   <button class="btn" onclick="output.value = Math.cos(output.value)">cos</button>
+                   <button class="btn"  onclick="output.value = Math.log10(output.value)" >log</button>
+                   <button class="btn" onclick="output.value += '4'">4</button>
+                   <button class="btn" onclick="output.value += '5'">5</button>
+                   <button class="btn" onclick="output.value += '6'">6</button>
+                   <button class="btn" onclick="output.value += '*'">*</button>
+               </div>
+               <div class="row">
+                   <button class="btn" onclick="output.value = Math.tan(output.value)">tan</button>
+                   <button class="btn" style="font-size: 25px; font-weight:bold;"  onclick="output.value = Math.sqrt(output.value)">&#8730;</button>
+                   <button class="btn" onclick="output.value += '1'">1</button>
+                   <button class="btn" onclick="output.value += '2'">2</button>
+                   <button class="btn" onclick="output.value += '3'">3</button>
+                   <button class="btn" onclick="output.value += '-'">-</button>
+               </div>
+               <div class="row">
+                   <button class="btn" onclick="output.value = Math.E">e</button>
+                   <button class="btn" onclick="output.value =(output.value)*(output.value)*(output.value) ">X <sup>3</sup></button>
+                   <button class="btn" onclick="output.value += '0'">0</button>
+                   <button class="btn" onclick="output.value += '.'">.</button>
+                   <button type="button" class="btn" value="=" onclick="output.value = eval(output.value)" id="eql">=</button>
+                   <button class="btn" onclick="output.value += '+'">+</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+
+    <script src="coustom.js"></script>
+</body>
+</html>
